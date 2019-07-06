@@ -1,0 +1,21 @@
+menu "Example Configuration"
+
+	choice DUSTSENSOR_UART_PORT
+		prompt "Select the UART Port. Note: UART0 is disabled, this is used for debugging"
+		default DUSTSENSOR_PORT_UART_1
+
+		config DUSTSENSOR_UART_PORT_1
+			bool "UART1"
+
+		config DUSTSENSOR_UART_PORT_2
+			bool "UART2"
+	endchoice
+
+	config DUSTSENSOR_UART_RX_PIN 
+		int "UART GPIO number"
+		range 0 34
+		default 2 
+		help
+			GPIO number for the UART RX pin.
+
+endmenu
