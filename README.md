@@ -6,11 +6,23 @@ This is an esp-idf module for using the plantower pms5003 dust sensor. This coll
 
 ## Wiring
 
-Connect the tx pin of the sensor to any input pin of the ESP32, note the default assignments for the rx pin.
+The PMS5003 module connects to ESP32 via serial 9600 baud, 8N1. You can use any serial port of the ESP32, only the TX pin of the PMS5003 is needed, the RX pin is left unconnected.
+
+In the examplem, I connected the tx pin of the sensor to GPIO 2 (or to any input pin of the ESP32), note the default assignments for the rx pin.
+
+	PMS5003 TX <--> ESP32 Pin GPIO2
+
 
 ## Configuration and Build
 
-Clone this repository on your esp-idf projects components subdirectory. Optionally look in the examples folder for referrence on how to use this component. With the example project, you can then issue:
+Clone this repository on your esp-idf projects components subdirectory. 
+		
+		>cd project
+		>mkdir components
+		>cd compnents
+		>git clone https://github.com/vpcola/plantower5003
+
+Optionally look in the examples folder for referrence on how to use this component. With the example project, you can then issue:
 
 		make menuconfig
 
