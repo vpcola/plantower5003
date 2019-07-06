@@ -19,7 +19,7 @@ Clone this repository on your esp-idf projects components subdirectory.
 		
 		>cd project
 		>mkdir components
-		>cd comp0nents
+		>cd components
 		>git submodule add https://github.com/vpcola/plantower5003.git
 
 Optionally look in the examples folder for referrence on how to use this component. With the example project, you can then issue:
