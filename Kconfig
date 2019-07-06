@@ -1,7 +1,7 @@
 menu "Dustsensor Parser"
 
     config DUSTSENSOR_PARSER_RING_BUFFER_SIZE
-        int "NMEA Parser Ring Buffer Size"
+        int "DUSTSENSOR Parser Ring Buffer Size"
         range 0 2048
         default 1024
         help

@@ -26,6 +26,8 @@ Optionally look in the examples folder for referrence on how to use this compone
 
 		make menuconfig
 
+You can fine tune the parameters for the PMS5003 dust sensor parser task by selecting "Component config -> Dustsensor Parser". 
+
 Set the GPIO for the RX pin and the UART port to use. After that, build the project with:
 
 		make flash monitor
