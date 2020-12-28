@@ -174,11 +174,7 @@ dustsensor_parser_handle_t dustsensor_parser_init(const dustsensor_parser_config
     }
 
     /* Set pattern interrupt, used to detect the end of a line */
-<<<<<<< HEAD
     uart_enable_pattern_det_baud_intr(esp_dustsensor->uart_port, 'B', 1, 9, 0, 0);
-=======
-    uart_enable_pattern_det_baud_intr(esp_dustsensor->uart_port, 0x42, 1, 9, 0, 0);
->>>>>>> c1e7f5922e16cd8f33336e5c8b82571b5308da5d
     /* Set pattern queue size */
     uart_pattern_queue_reset(esp_dustsensor->uart_port, config->uart.event_queue_size);
     uart_flush(esp_dustsensor->uart_port);
