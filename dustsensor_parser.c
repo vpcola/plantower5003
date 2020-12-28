@@ -76,7 +76,7 @@ static void esp_handle_uart_pattern(esp_dustsensor_t *esp_dustsensor)
 
     uart_get_buffered_data_len(esp_dustsensor->uart_port, &buffered_size);
     int pos = uart_pattern_pop_pos(esp_dustsensor->uart_port);
-    ESP_LOGI(DUSTSENSOR_TAG, "[PATTERN DETECTED] pos: %d, buffered size: %d", pos, buffered_size);
+    //ESP_LOGI(DUSTSENSOR_TAG, "[PATTERN DETECTED] pos: %d, buffered size: %d", pos, buffered_size);
 
     if (pos != -1) {
         /* read one line(include '\n') */
