@@ -162,7 +162,7 @@ dustsensor_parser_handle_t dustsensor_parser_init(const dustsensor_parser_config
         ESP_LOGE(DUSTSENSOR_TAG, "config uart parameter failed");
         goto err_uart_config;
     }
-    if (uart_set_pin(esp_dustsensor->uart_port, UART_PIN_NO_CHANGE, config->uart.rx_pin,
+    if (uart_set_pin(esp_dustsensor->uart_port, config->uart.tx_pin, config->uart.rx_pin,
                 UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE) != ESP_OK) {
         ESP_LOGE(DUSTSENSOR_TAG, "config uart gpio failed");
         goto err_uart_config;

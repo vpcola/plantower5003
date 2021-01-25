@@ -37,7 +37,8 @@ typedef struct {
 typedef struct {
     struct {
         uart_port_t uart_port;        /*!< UART port number */
-        uint32_t rx_pin;              /*!< UART Rx Pin number */
+        int32_t rx_pin;  	            /*!< UART Rx Pin number */
+        int32_t tx_pin;							  /*!< UART Tx Pin number */
         uint32_t baud_rate;           /*!< UART baud rate */
         uart_word_length_t data_bits; /*!< UART data bits length */
         uart_parity_t parity;         /*!< UART parity */
@@ -53,6 +54,7 @@ typedef void *dustsensor_parser_handle_t;
         .uart = {                          \
             .uart_port = UART_NUM_1,       \
             .rx_pin = 2,                   \
+            .tx_pin = UART_PIN_NO_CHANGE,	 \
             .baud_rate = 9600,             \
             .data_bits = UART_DATA_8_BITS, \
             .parity = UART_PARITY_DISABLE, \
